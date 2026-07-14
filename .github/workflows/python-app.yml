@@ -37,3 +37,12 @@ jobs:
     - name: Test with pytest
       run: |
         pytest
+        # test_energy_clean.py
+from energy_clean_script import clean  # Assuming your cleaning function is named clean
+
+def test_clean_output_not_empty():
+    # Run the clean function
+    df = clean()
+    # Check if the result is not empty
+    assert len(df) > 0
+    
